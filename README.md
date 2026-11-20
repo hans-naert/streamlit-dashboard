@@ -8,6 +8,12 @@ python3 -m venv .venv
 pip install -r requirements.txt
 ```
 
+Het dashboard toont het niveau van GPIO 17 en vernieuwt dit elke 2 seconden.
+Het gebruikt hiervoor `pinctrl`, dat op de Raspberry Pi beschikbaar moet zijn.
+De gebruiker die het dashboard start, heeft toegang tot `/dev/gpiomem` nodig
+(bijvoorbeeld via de groep `gpio`). De checkbox geeft alleen de toestand weer;
+de pin wordt niet aangestuurd.
+
 Start het dashboard:
 
 ```bash
